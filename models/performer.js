@@ -8,4 +8,4 @@ const performerSchema = new mongoose.Schema({
 
 const Performer = mongoose.model('Performer', performerSchema)
 
-modules.export = Performer
+module.exports = Performer
