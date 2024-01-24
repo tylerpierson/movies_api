@@ -1,0 +1,11 @@
+const mongoose = require('mongoose')
+
+const performerSchema = new mongoose.Schema({
+    name: { type: String, required: true },
+    birthdate: { type: String, required: true },
+    credits: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Movie'}]
+})
+
+const Performer = mongoose.model('Performer', performerSchema)
+
+modules.export = Performer
